@@ -2,6 +2,12 @@ package com.edu.udea.iw.dao.impl;
 
 import static org.junit.Assert.*;
 
+/**
+ * Clase para generar casos de prueba de los métodos de la clase CiudadDAO
+ * @author: Sandra Viviana Londoño C
+ * @version: 14/03/2017 1.0
+ */
+
 import java.util.List;
 
 import org.junit.Test;
@@ -12,6 +18,9 @@ import com.edu.udea.iw.exception.MyException;
 
 public class CiudadDAOImpTest {
 
+	/*
+	 * Método para hacer pruebas al método que gnera la lista de las ciudades
+	 */
 	@Test
 	public void testObtener() {
 		CiudadDAO ciudadDAO = null;
@@ -27,6 +36,9 @@ public class CiudadDAOImpTest {
 		}
 	}
 	
+	/*
+	 * Método para hacer pruebas al método que trae una ciudad según su código
+	 */
 	public void testObtener1() {
 		CiudadDAO ciudadDAO = null;
 		Ciudad ciudad = null;

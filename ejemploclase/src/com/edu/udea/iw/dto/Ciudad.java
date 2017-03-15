@@ -1,9 +1,10 @@
-/*Autor: Viviana LondoÃ±o
- *
- * 
- * */
-
 package com.edu.udea.iw.dto;
+
+/**
+ * Esta es la clase que contiene la información básica de la ciudad, setters y getters POJO.
+ * @author: Sandra Viviana Londoño C
+ * @version: 14/03/2017 1.0
+ */
 
 public class Ciudad {
 	private long codigo;

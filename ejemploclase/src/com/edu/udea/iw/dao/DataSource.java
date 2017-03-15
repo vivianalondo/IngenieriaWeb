@@ -7,17 +7,30 @@ import java.sql.SQLException;
 
 import com.edu.udea.iw.exception.MyException;
 
-//Clase para la conexion a la base de datos
+
+/**
+ * Esta es la clase para la conexion a la base de datos, utilizando singleton pattern
+ * @author: Sandra Viviana Londoño C
+ * @version: 14/03/2017 1.0
+ */
+
 public class DataSource {
 	
-	//FunciÃ³n para obtener la conexiÃ³n
+	//Creamos la variable privada para la conexión
+	private static Connection con=null;
+	
+	/*
+	 * Método para obtener la conexión.
+	 * Se crea el método estático que verifica si ya existe una instancia de la variable con,
+	 * si esta ya existiera (con!=null) la retorna y termina el método.
+	 */
 	public static Connection getConnection() throws MyException{
-		Connection con = null;
 		
 		try{
-			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ejemploclase","root","root");
-		
+			if (con==null){
+				Class.forName("com.mysql.jdbc.Driver");
+				con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ejemploclase","root","");
+			}
 		}catch(ClassNotFoundException e){
 			throw new MyException("Driver no encontrado",e);
 		}catch (SQLException e){
@@ -25,4 +38,6 @@ public class DataSource {
 		}
 		return con;
 	}
+			
+		
 }

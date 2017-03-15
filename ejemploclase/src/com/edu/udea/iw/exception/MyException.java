@@ -1,5 +1,11 @@
 package com.edu.udea.iw.exception;
 
+/**
+ * Clase para el manejo de excepciones.
+ * @author: Sandra Viviana Londoño C
+ * @version: 14/03/2017 1.0
+ */
+
 public class MyException extends Exception {
 
 	public MyException() {

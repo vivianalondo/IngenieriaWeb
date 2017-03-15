@@ -12,8 +12,17 @@ import com.edu.udea.iw.dao.DataSource;
 import com.edu.udea.iw.dto.Ciudad;
 import com.edu.udea.iw.exception.MyException;
 
+/**
+ * Esta es la clase para implementar los métodos definidos en la interface CiudadDAO
+ * @author: Sandra Viviana Londoño C
+ * @version: 14/03/2017 1.0
+ */
+
 public class CiudadDAOImp implements CiudadDAO{
 	
+	/*
+	 * Implementación del método que entrega la lista completa de las ciudades existentes en la base de datos
+	 */
 	@Override
 	public List<Ciudad> obtener() throws MyException {
 		PreparedStatement ps = null;
@@ -50,9 +59,11 @@ public class CiudadDAOImp implements CiudadDAO{
 		}
 		
 		return lista;
-	}
+	}//Fin método obtener lista
 	
-	/*ImplementaciÃ³n del mÃ©todo para obtener ciudades por cÃ³digo*/
+	/*
+	 * Implementación del método para filtrar ciudades por codigo
+	 */
 	@Override
 	public Ciudad obtener(Long codigo) throws MyException {
 	
