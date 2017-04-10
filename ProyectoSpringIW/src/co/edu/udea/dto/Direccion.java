@@ -1,5 +1,10 @@
 package co.edu.udea.dto;
 
+/**
+ * Esta es la clase que contiene la información básica de la dirección, setters y getters POJO.
+ * @author: Viviana Londoño
+ * @version: 1.0
+ */
 public class Direccion {
 	
 	private DireccionId id;

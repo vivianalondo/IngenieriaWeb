@@ -12,6 +12,12 @@ import co.edu.udea.dao.CiudadDAO;
 import co.edu.udea.dto.Ciudad;
 import co.edu.udea.exception.MyException;
 
+
+/**
+ * Clase donde se implementan los métodos de la interface Ciudad
+ * @author Viviana Londoño
+ *
+ */
 public class CiudadDAOImp implements CiudadDAO{
 	
 private SessionFactory sessionFactory;
@@ -30,6 +36,9 @@ private SessionFactory sessionFactory;
 		this.sessionFactory = sessionFactory;
 	}
 	
+	/**
+	 * Implementación del método obtener lista de ciudades
+	 */
 	@Override
 	public List<Ciudad> obtener() throws MyException {
 		List<Ciudad> ciudades = new ArrayList<>();
@@ -49,6 +58,9 @@ private SessionFactory sessionFactory;
 	return ciudades;
 	}
 
+	/**
+	 * Implementación del método obtener ciudad según el código
+	 */
 	@Override
 	public Ciudad obtener(Long codigo) throws MyException {
 		Ciudad ciudad= new Ciudad();
@@ -64,6 +76,9 @@ private SessionFactory sessionFactory;
 		return ciudad;
 	}
 
+	/**
+	 * Implementación del método guardar ciudad
+	 */
 	@Override
 	public void guardar(Ciudad ciudad) throws MyException {
 		Session session = null;

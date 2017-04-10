@@ -15,13 +15,18 @@ import co.edu.udea.dao.CiudadDAO;
 import co.edu.udea.dto.Ciudad;
 import co.edu.udea.exception.MyException;
 
-@RunWith(SpringJUnit4ClassRunner.class)//Anotaciones para correr la prueba con otro runner
-@Transactional //Para decir que la clase es de tipo transacional 
-@ContextConfiguration(locations="classpath:SpringConfig.xml") //Decirle a spring donde está el archivo de config. de spring para que cargue al inicio
+/**
+ * Test para hacer las pruebas de los métodos de Ciudad
+ * @author: Viviana Londoño
+ * @version: 1.0
+ */
+@RunWith(SpringJUnit4ClassRunner.class)//Anotacion para correr la prueba con otro runner
+@Transactional //Anotación para indicar que la clase es de tipo transaccional 
+@ContextConfiguration(locations="classpath:SpringConfig.xml") //Anotación para decirle a spring donde está el archivo de configuración de spring y cargarlo al inicio
 
 public class CIudadDAOImpTest {
 	
-	@Autowired //Para decirle que lo inyecte -- Inicializa la variables(Spring lo hace)
+	@Autowired //Para indicar la inyeccion
 	private CiudadDAO ciudadDAO;
 
 	public void testObtener() {

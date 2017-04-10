@@ -13,9 +13,15 @@ import co.edu.udea.dao.UsuarioDAO;
 import co.edu.udea.dto.Usuario;
 import co.edu.udea.exception.MyException;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@Transactional
-@ContextConfiguration(locations="classpath:SpringConfig.xml")
+/**
+ * Test para hacer las pruebas de los métodos de Usuario
+ * @author: Viviana Londoño
+ * @version: 1.0
+ */
+@RunWith(SpringJUnit4ClassRunner.class)//Anotacion para correr la prueba con otro runner
+@Transactional //Anotación para indicar que la clase es de tipo transaccional 
+@ContextConfiguration(locations="classpath:SpringConfig.xml") //Anotación para decirle a spring donde está el archivo de configuración de spring y cargarlo al inicio
+
 public class UsuarioDAOImpTest {
 	
 	@Autowired

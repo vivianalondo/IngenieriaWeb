@@ -17,9 +17,15 @@ import co.edu.udea.dto.Cliente;
 import co.edu.udea.dto.Usuario;
 import co.edu.udea.exception.MyException;
 
-@RunWith(SpringJUnit4ClassRunner.class)//Anotaciones para correr la prueba con otro runner
-@Transactional //Para decir que la clase es de tipo transacional 
-@ContextConfiguration(locations="classpath:SpringConfig.xml") //Decirle a spring donde está el archivo de config. de spring para que cargue al inicio
+/**
+ * Test para hacer las pruebas de los métodos de Cliente
+ * @author: Viviana Londoño
+ * @version: 1.0
+ */
+
+@RunWith(SpringJUnit4ClassRunner.class)//Anotacion para correr la prueba con otro runner
+@Transactional //Anotación para indicar que la clase es de tipo transaccional 
+@ContextConfiguration(locations="classpath:SpringConfig.xml") //Anotación para decirle a spring donde está el archivo de configuración de spring y cargarlo al inicio
 
 public class ClienteDAOImpTest {
 
@@ -60,6 +66,7 @@ public class ClienteDAOImpTest {
 			clienteDAO.guardar(cliente);
 			
 		}catch(MyException e){
+			e.printStackTrace();
 			fail(e.getMessage());
 		}
 	}

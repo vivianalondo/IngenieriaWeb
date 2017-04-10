@@ -2,6 +2,11 @@ package co.edu.udea.dto;
 
 import java.io.Serializable;
 
+/**
+ * Esta es la clase que contiene la información del la dirección id para la clave primaria de la clase Direccion.
+ * @author: Viviana Londoño
+ * @version: 1.0
+ */
 public class DireccionId implements Serializable {
 	private Long codigo;
 	private Cliente cliente;

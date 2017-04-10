@@ -13,6 +13,11 @@ import co.edu.udea.dao.ClienteDAO;
 import co.edu.udea.dto.Cliente;
 import co.edu.udea.exception.MyException;
 
+/**
+ * Clase donde se implementan los métodos de la interface Cliente
+ * @author Viviana Londoño
+ *
+ */
 public class ClienteDAOImp implements ClienteDAO{
 	
 private SessionFactory sessionFactory;
@@ -33,7 +38,9 @@ private SessionFactory sessionFactory;
 		this.sessionFactory = sessionFactory;
 	}
 
-
+	/**
+	 * Implementación del método obtener lista de clientes
+	 */
 	@Override
 	public List<Cliente> obtener() throws MyException {
 		List<Cliente> clientes = new ArrayList<Cliente>();
@@ -54,6 +61,10 @@ private SessionFactory sessionFactory;
 		return clientes;
 	}
 
+	
+	/**
+	 * Implementación del método guardar cliente
+	 */
 	@Override
 	public void guardar(Cliente cliente) throws MyException {
 		// TODO Auto-generated method stub
@@ -61,9 +72,9 @@ private SessionFactory sessionFactory;
 				//Transaction tx = null;
 				
 				try{
-					//session = DataSource.getInstance().getSession();
-					session = sessionFactory.getCurrentSession();
+					session = sessionFactory.openSession();
 					session.save(cliente);
+					session.flush();
 				}catch(HibernateException e)
 				{
 					throw new MyException("Ocurrió un error guardando el cliente",e);

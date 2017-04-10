@@ -4,6 +4,11 @@ import java.util.Date;
 import java.util.Set;
 import java.lang.Boolean;
 
+/**
+ * Esta es la clase que contiene la información básica del cliente, setters y getters POJO.
+ * @author: Viviana Londoño
+ * @version: 1.0
+ */
 public class Cliente {
 	private String cedula;
 	private String nombres;

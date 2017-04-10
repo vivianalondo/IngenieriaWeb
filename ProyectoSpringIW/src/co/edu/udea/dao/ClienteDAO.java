@@ -6,18 +6,24 @@ import co.edu.udea.dto.Cliente;
 import co.edu.udea.exception.MyException;
 
 /**
- * Interface para definir los métodos del cliente en el sistema
+ * Interface para definir los métodos de cliente
  * @author Viviana Londoño
- *
+ * @version 1.0
  */
 public interface ClienteDAO {
 
 	
 	/**
-	 * Obtener todos los clientes de la base de datos ordenados por su fecha de creacion
-	 * @return
+	 * 
+	 * @return Retorna la lista de los clientes que se encuentran en la BD ordenados por fecha 
 	 * @throws MyException
 	 */
 	public List<Cliente> obtener()  throws MyException;
+	
+	/**
+	 * 
+	 * @param Se le envía el objeto cliente que se desea guardar
+	 * @throws MyException
+	 */
 	public void guardar(Cliente cliente) throws MyException;
 }
