@@ -47,5 +47,14 @@
 	<bean name="clienteDAO" class="co.edu.udea.dao.imp.ClienteDAOImp">
 		<property name="sessionFactory" ref="SessionFactory"></property>
 	</bean>
+	
+	<bean name="clienteBl" class="co.edu.udea.bl.ClienteBl">
+		<property name="clienteDAO" ref="clienteDAO"></property>
+		<property name="usuarioDAO" ref="usuarioDAO"></property>
+	</bean>
+	
+	<bean name="usuarioBl" class="co.edu.udea.bl.UsuarioBl">
+		<property name="usuarioDAO" ref="usuarioDAO"></property>
+	</bean>
 
 </beans>
